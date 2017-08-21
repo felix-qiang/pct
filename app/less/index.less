@@ -2,6 +2,15 @@ body {
   font-family: "Microsoft Yahei", "微软雅黑", Helvetica, Arial, sans-serif;
 }
 
+.navbar-brand {
+  padding: 0;
+}
+
+.navbar {
+  margin-bottom: 0;
+  border: none;
+}
+
 @media (min-width: 1200px) {
   .container {
     width: 1280px;
@@ -10,14 +19,15 @@ body {
 }
 
 .nav_bg {
+  padding-top: 18px;
   height: 150px;
-  padding: 20px 0;
   .navbar-nav {
     padding: 20px 0;
     list-style: none;
     margin: 0;
     & > li {
-      padding:45px 0 45px 30px;
+      padding: 27px 15px;
+      font-size: 18px;
       &.active {
         & > a {
           background: #139ca5;
@@ -29,7 +39,9 @@ body {
         position: absolute;
         top: 0;
         right: 0;
-        padding:0;
+        padding: 0;
+        margin-right: 50px;
+        font-size: 14px;
         & > a {
           padding: 0;
           &:hover {
@@ -39,6 +51,7 @@ body {
         }
       }
       & > a {
+        display: block;
         padding: 5px 10px;
         color: #323333;
         &:hover {
@@ -47,70 +60,99 @@ body {
           color: #ffffff;
         }
       }
+
     }
 
   }
 }
 
-.content{
-  img{
-    max-width:100%;
+.nav-dropdown {
+  .caret {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
   }
-  width:100%;
-  margin-top: 150px;
+
+  &.active {
+    .caret {
+      color: #139ca5;
+    }
+  }
+
+  .dropdown-menu {
+    &>li{
+      &>a{
+        display: inline-block;
+        color: #139ca5;
+        line-height: 30px;
+        &:hover{
+          background: transparent;
+        }
+      }
+    }
+    top: 112px;
+    width:200px;
+    border-top: 3px solid #139ca5;
+  }
 }
 
+.content {
+  img {
+    max-width: 100%;
+  }
+  width: 100%;
+}
 
-.footer{
-  .footer_1{
-    height:250px;
+.footer {
+  .footer_1 {
+    height: 250px;
     overflow: hidden;
     background: #27292e;
-    padding:20px 0 30px 0;
+    padding: 20px 0 30px 0;
     color: #ffffff;
-    h4{
+    h4 {
       font-size: 16px;
       margin-bottom: 15px;
       padding-bottom: 15px;
-      border-bottom:1px dashed #ffffff;
+      border-bottom: 1px dashed #ffffff;
     }
-    p{
-      margin:0;
-      padding:0;
+    p {
+      margin: 0;
+      padding: 0;
       line-height: 23px;
       font-size: 12px;
     }
-    .more{
+    .more {
       position: absolute;
-      bottom:5px;
-      right:15px;
+      bottom: 5px;
+      right: 15px;
       font-size: 12px;
-      a{
+      a {
         color: #ffffff;
       }
     }
-    img{
+    img {
       padding-top: 32px;
     }
-    .margin-top{
-      margin-top:6px;
+    .margin-top {
+      margin-top: 6px;
       margin-bottom: 40px;
     }
-    .white_frame{
+    .white_frame {
       background: transparent;
-      border:1px solid #ffffff;
+      border: 1px solid #ffffff;
       -webkit-border-radius: 2px;
       -moz-border-radius: 2px;
       border-radius: 2px;
       font-size: 18px;
       color: #ffffff;
-      padding:10px 20px;
+      padding: 10px 20px;
     }
-    .formation{
+    .formation {
 
     }
   }
-  .footer_2{
+  .footer_2 {
     text-align: center;
     padding: 30px 0 15px 0;
     background: #dcdddd;
