@@ -6,18 +6,27 @@ var gulp = require('gulp'),
     fileinclude = require('gulp-file-include'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
+    imagemin = require('gulp-imagemin'),
     rename = require('gulp-rename');      //文件名命名
 
 gulp.task('imagemin', function(){
-    return gulp.src('./img/*.{png,jpg,gif,ico}')
+    return gulp.src('./image/*.{png,jpg,gif,ico}')
         .pipe(imagemin())
         .pipe(gulp.dest('dist/img'))
 })
-gulp.task('mainjs', function () {
-    gulp.src('./js/*.js')
-        .pipe(concat("main.js"))           //合并
+gulp.task('ie', function () {
+    gulp.src('./js/ie/*.js')
+        .pipe(concat("ie.js"))           //合并
         .pipe(gulp.dest("dist/js"))          //输出保存
-        .pipe(rename("main.min.js"))          //重命名
+        .pipe(rename("ie.min.js"))          //重命名
+        .pipe(uglify())                        //压缩
+        .pipe(gulp.dest("dist/js"));
+});
+gulp.task('lib', function () {
+    gulp.src(['./js/jquery.min.js','./js/bootstrap.min.js'])
+        .pipe(concat("lib.js"))           //合并
+        .pipe(gulp.dest("dist/js"))          //输出保存
+        .pipe(rename("lib.min.js"))          //重命名
         .pipe(uglify())                        //压缩
         .pipe(gulp.dest("dist/js"));
 });
@@ -41,7 +50,7 @@ gulp.task('fileinclude', function () {
 });
 gulp.task('watch', function () {
     gulp.watch('less/**/*.less', ['compile-less']); //当所有less文件发生改变时，调用testLess任务
-    gulp.watch('', ['assetjs']); //当所有less文件发生改变时，调用testLess任务
+    gulp.watch('./image/*.{png,jpg,gif,ico}', ['imagemin']);
     gulp.watch('page/**/*.html', ['fileinclude']);
 });
 
