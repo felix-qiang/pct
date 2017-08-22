@@ -55,9 +55,15 @@ body {
         padding: 5px 10px;
         color: #323333;
         &:hover {
+          .caret{
+            color:#139ca5;
+          }
           background: #139ca5;
           text-decoration: none;
           color: #ffffff;
+        }
+        &:active,&:focus{
+          text-decoration: none;
         }
       }
 
@@ -71,6 +77,7 @@ body {
     position: absolute;
     left: 50%;
     bottom: 0;
+    color: #ffffff;
   }
 
   &.active {
@@ -156,6 +163,21 @@ body {
     text-align: center;
     padding: 30px 0 15px 0;
     background: #dcdddd;
+  }
+}
+
+
+
+/*页面*/
+.center_title{
+  font-size: 24px;
+  background: url("../img/more_bg.png") repeat-x center;
+  color: #169caa;
+  span{
+    color: #cccccc;
+  }
+  a{
+    font-size: 12px;
   }
 }
 
