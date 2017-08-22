@@ -14,11 +14,22 @@ $(function () {
             data: {
                 phone: phone
             },
+            beforeSend:function () {
+                $('#vilate').text('正在发送');
+            },
             success: function (data) {
+
                 if (data.code != 1) {
                     $('#msg').text(data.msg);
                     $('.modal').show();
+                }else{
+                    $('#msg').text('验证码发送成功');
+                    $('.modal').show();
+                    $('#vilate').text('重新发送');
                 }
+            },
+            error:function () {
+
             }
         });
 
