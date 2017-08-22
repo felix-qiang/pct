@@ -14,7 +14,7 @@ $(function () {
             data: {
                 phone: phone
             },
-            beforeSend:function () {
+            beforeSend: function () {
                 $('#vilate').text('正在发送');
             },
             success: function (data) {
@@ -22,13 +22,13 @@ $(function () {
                 if (data.code != 1) {
                     $('#msg').text(data.msg);
                     $('.modal').show();
-                }else{
+                } else {
                     $('#msg').text('验证码发送成功');
                     $('.modal').show();
                     $('#vilate').text('重新发送');
                 }
             },
-            error:function () {
+            error: function () {
 
             }
         });
@@ -61,4 +61,14 @@ $(function () {
             }
         });
     });
+
+    // 处理font-size
+    var base = 30;
+    var baseWidth = 750;
+    $('html').css('fontSize', $('.root').outerWidth() / baseWidth * base);
+    $(window).resize(function () {
+        $('html').css('fontSize', $('.root').outerWidth() / baseWidth * base);
+    });
+
+
 });

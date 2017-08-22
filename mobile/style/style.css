@@ -13,10 +13,14 @@ html, body {
     height: 100%;
 }
 
+html {
+    font-size: 30px;
+}
+
 body {
     font-family: "Microsoft Yahei", "微软雅黑", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    color: #333333;
+    font-size: 100%;
+    color: #ffffff;
     background-color: #ffffff;
     line-height: 1;
 }
@@ -27,37 +31,37 @@ ul, li {
 
 .root {
     max-width: 750px;
-    padding: 0 30px 60px 30px;
     margin: 0 auto;
-    background: #082d44 url("../image/bg.jpg") no-repeat center;
-    /*background-size: 100%;*/
-    min-height: 100%;
+    background: #082d44 url("../image/bg.jpg") no-repeat;
+    height: 100%;
+    overflow: auto;
+    background-size: 100%;
+}
+
+.inner {
+    max-width: 581px;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-top: 10%;
 }
 
 .banner {
-    max-width: 581px;
-    margin: 0 auto;
-    padding-top: 125px;
 }
 
 .banner img {
     width: 100%;
 }
 
-.footer {
-    font-size: 24px;
-    color: #ffffff;
+.info {
+    margin: 7% 0 3% 0;
     text-align: center;
-    margin-top: 100px;
-    line-height: 40px;
 }
 
 .mobile-form {
-    font-size: 24px;
-    color: #ffffff;
-    /*max-width: 581px;*/
-    /*margin: 0 auto;*/
-    margin-top: 150px;
+}
+
+.form-group {
+    padding-top: 7%;
 }
 
 .form-group:before, .form-group:after {
@@ -73,13 +77,14 @@ ul, li {
 .form-name {
     float: left;
     width: 25%;
-    line-height: 80px;
+    line-height: 2rem;
 }
 
-.form-input,.form-input_phone {
+.form-input, .form-input_phone {
     background-color: #ffffff;
     float: left;
-    height: 80px;
+    height: 2rem;
+    line-height: 2rem;
     width: 75%;
     padding: 0 20px;
     border: none;
@@ -87,69 +92,43 @@ ul, li {
     -moz-border-radius: 0;
     border-radius: 0;
 }
-.form-input_phone{
+
+.form-input_phone {
     width: 45%;
 }
-.form-valite,.btn{
+
+.form-valite, .btn {
     width: 30%;
     background: #72c5d7;
     color: #0e3665;
-    font-size: 24px;
-    height: 80px;
+    font-size: 0.8rem;
+    height: 2rem;
+    line-height: 2rem;
     border: none;
     float: left;
     text-align: center;
-    line-height: 80px;
     cursor: pointer;
 }
-.form-group{
-    margin-bottom: 30px;
-}
-.btn{
-    font-size: 30px;
+
+.btn {
+    font-size: 1rem;
     float: inherit;
     display: block;
-    margin: 0 auto;
-    margin-top: 80px;
-    padding: 0px 20px;
+    margin: 2rem auto 0 auto;
+    height: 2.6666rem;
+    line-height: 2.6666rem;
 }
 
-
-@media screen and (max-width:480px){
-    .banner{
-    padding-top:80px;
-    }
-    .mobile-form{
-        font-size: 15px;
-        margin-top:50px;
-    }
-    .form-name {
-        line-height: 50px;
-    }
-    .form-input,.form-input_phone{
-        height: 50px;
-        line-height: 50px;
-    }
-    .form-valite,.btn{
-        font-size: 12px;
-        height: 50px;
-        line-height: 50px;
-    }
-    .btn{
-        font-size: 16px;
-        margin-top: 40px;
-    }
-    .footer{
-        font-size: 15px;
-        line-height: 25px;
-    }
+.footer {
+    font-size: 0.8rem;
+    text-align: center;
+    line-height: 1.4;
+    padding: 1.3333rem 0 1.6666rem 0;
 }
-
-
 
 /*弹窗*/
-.modal{
-    background: rgba(0,0,0,0.7);
+.modal {
+    background: rgba(0, 0, 0, 0.7);
     z-index: 10;
     position: fixed;
     left: 0;
@@ -158,76 +137,110 @@ ul, li {
     width: 100%;
     display: none;
 }
-.modal-inner{
+
+.modal-inner {
+    color: #00385c;
     width: 80%;
     text-align: center;
     padding: 40px;
     background: #ffffff;
     margin: 0 auto;
-    margin-top:40%;
+    margin-top: 40%;
     font-size: 24px;
 }
-.modal .btn_close{
+
+.modal .btn_close {
     background: #00385c;
     color: #ffffff;
     padding: 6px 20px;
     text-align: center;
     line-height: 30px;
     border: none;
-    margin-top:30px;
+    margin-top: 30px;
 }
-@media screen and (max-width:480px){
-    .modal-inner{
+
+@media screen and (max-width: 480px) {
+    .modal-inner {
         font-size: 16px;
     }
 }
 
 /*成功领取*/
-.qcode{
+.qcode {
+    background: url("./../image/qcode.jpg") no-repeat;
+    background-size: 100%;
+    text-align: center;
+    background-color: #082d45;
+}
+
+.success {
+    font-size: 1.2rem;
+}
+
+.success p {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    margin-bottom: 2.3333rem;
+}
+
+.qcode-img {
+    max-width: 594px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/*
+
+/!*成功领取*!/
+.qcode {
     background: url("./../image/qcode.png") no-repeat center;
     text-align: center;
     background-color: #082d45;
 }
-.success{
+
+.success {
     font-size: 24px;
     color: #ffffff;
 }
-.success p{
+
+.success p {
     font-size: 16px;
     margin-top: 30px;
     margin-bottom: 100px;
 }
-.export{
+
+.export {
     padding: 50px;
     background: url("./../image/export.png") no-repeat center;
     background-size: cover;
     font-size: 16px;
     height: 720px;
 }
-.export p{
+
+.export p {
     color: #00385c;
     font-size: 24px;
     margin-bottom: 30px;
 }
-.export img{
+
+.export img {
     max-width: 340px;
 }
 
-
-
-
-@media screen and (max-width:480px){
-    .export{
-        height:500px ;
+@media screen and (max-width: 480px) {
+    .export {
+        height: 500px;
     }
 }
 
-@media screen and (max-width:320px){
-    .export{
-        height:400px ;
+@media screen and (max-width: 320px) {
+    .export {
+        height: 400px;
     }
-    .success p{
+
+    .success p {
         font-size: 14px;
         margin-bottom: 30px;
     }
 }
+*/

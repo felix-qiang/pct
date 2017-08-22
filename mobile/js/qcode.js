@@ -18,4 +18,12 @@ $(function () {
 
     $('#qcode-img').attr('src', decodeURIComponent(qcodeUrl));
 
+
+    // 处理font-size
+    var base = 30;
+    var baseWidth = 750;
+    $('html').css('fontSize', $('.root').outerWidth() / baseWidth * base);
+    $(window).resize(function () {
+        $('html').css('fontSize', $('.root').outerWidth() / baseWidth * base);
+    });
 });
