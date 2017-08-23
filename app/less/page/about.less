@@ -17,7 +17,41 @@
   padding-bottom:150px;
   position: relative;
   min-height:550px;
+  &.lsyg{
+    padding-bottom: 0;
+    .china_right{
+      dl{
+        width: 100%;
+        dt{
+          float: left;
+          width: 12%;
+          height: 30px;
+          line-height: 30px;
+          color: #FFFFFF;
+          padding-right: 22px;
+          text-align: center;
+          background: url("../img/about/ls01.png") no-repeat left;
+          position: relative;
+        }
+        dd{
+          float: left;
+          width:88%;
+          border-left: 5px solid #cccccc;
+          padding-left: 20px;
+          margin-left: -5px;
+          padding-bottom: 50px;
+          font-size: 12px;
+          img{
+            margin-bottom: 20px;
+          }
+          &:last-child{
+            padding-bottom: 150px;
+          }
+        }
+      }
+    }
 
+  }
   .china_left{
     position: absolute;
     top:0;
@@ -62,6 +96,15 @@
 
       }
     }
+    &.whln{
+      .media-body{
+        padding-left: 15px;
+        padding-top: 15px;
+      }
+      p{
+        text-indent: 30px;
+      }
+    }
     &.byfc{
       .byfc_title{
         font-size: 18px;
@@ -74,5 +117,6 @@
         margin-bottom: 50px;
       }
     }
+
   }
 }
