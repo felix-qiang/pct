@@ -20,7 +20,7 @@
     margin-top: 35px;
     font-weight: bold;
     text-align: center;
-    a{
+    a {
       color: #159ba6;
 
     }
@@ -56,6 +56,7 @@
           p {
             font-size: 12px;
             font-weight: normal;
+            color: #999;
           }
         }
       }
@@ -80,6 +81,208 @@
       width: 10px;
       height: 10px;
       background: #d3aa2e;
+    }
+  }
+
+  .center_title {
+    //background-repeat: no-repeat;
+    background: url("../img/index/more-bg.png") 156px 0 no-repeat;
+    line-height: 36px;
+  }
+
+  .text-green {
+    color: #169caa;
+  }
+
+  .new-block {
+    padding-right: 20px;
+    .col-md-6:first-child {
+      padding-right: 0;
+    }
+  }
+
+  .news-info {
+    padding: 10px 20px 8px 20px;
+    border: 2px #ededed solid;
+  }
+  .news-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+
+  }
+
+  .news-info p {
+    color: #999899;
+    line-height: 2;
+  }
+
+  .index-head {
+    background: url("../img/index/more-bg.png") 0 50% repeat;
+
+  }
+
+  .index-title {
+    font-size: 18px;
+    background: #FFFFFF;
+    line-height: 36px;
+  }
+
+  .site-list {
+    border-left: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    margin-top: 34px;
+    padding: 0 14px 4px 14px;
+
+    > li {
+      margin-bottom: 12px;
+      color: #666;
+    }
+
+    a {
+      color: #666;
+    }
+  }
+
+  dt {
+    background: url("../img/index/mark.png") 0 50% no-repeat;
+    padding-left: 20px;
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 20px;
+  }
+
+  dd {
+    color: #999899;
+    line-height: 26px;
+  }
+
+  .look-info {
+    border-radius: 0px;
+    background: #169ba6;
+    color: #FFFFFF;
+    font-size: 12px;
+    border: 0;
+    padding: 8px 10px;
+  }
+
+  dl {
+    padding-right: 20px;
+    border-bottom: 1px dotted #ededed;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+  }
+
+  //  左侧导航
+  .index-nav {
+
+    width: 184px;
+    float: left;
+    border-left: 1px solid #efefef;
+    border-right: 1px solid #efefef;
+    text-align: center;
+
+    a {
+      padding: 30px 0;
+      color: #999999;
+      border-bottom: 1px solid #efefef;
+
+      &:hover, &:focus, &:active {
+        background: transparent;
+      }
+    }
+
+    .index-nav-name {
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    .index-nav-mark {
+      display: block;
+      height: 70px;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+
+      &.wy {
+        background-image: url(../img/index/wy.png);
+      }
+      &.gj {
+        background-image: url(../img/index/gj.png);
+      }
+      &.jy {
+        background-image: url(../img/index/wy.png);
+      }
+      &.jk {
+        background-image: url(../img/index/wy.png);
+      }
+      &.jr {
+        background-image: url(../img/index/jr.png);
+      }
+    }
+
+    .active {
+      > a {
+        color: #00a5b1;
+      }
+
+      .index-nav-mark {
+        &.wy {
+          background-image: url(../img/index/wy-active.png);
+        }
+        &.gj {
+          background-image: url(../img/index/gj-active.png);
+        }
+        &.jy {
+          background-image: url(../img/index/wy-active.png);
+        }
+        &.jk {
+          background-image: url(../img/index/wy-active.png);
+        }
+        &.jr {
+          background-image: url(../img/index/jr-active.png);
+        }
+      }
+
+    }
+
+  }
+
+  // 主题内容
+  .index-context {
+    margin-left: 184px;
+    padding: 50px;
+
+    h5 {
+      font-size: 18px;
+      color: #333333;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    p {
+      color: #666666;
+      line-height: 30px;
+      text-indent: 30px;
+      margin-bottom: 30px;
+    }
+  }
+
+  // 新闻咨询nav
+  .index-news-nav {
+    width: 184px;
+    float: left;
+    border-right: 1px solid #efefef;
+    text-align: center;
+    min-height: 800px;
+    padding: 30px 0;
+  }
+
+  .index-news-context {
+    margin-left: 184px;
+    padding: 30px;
+
+    .news-list li {
+      margin-bottom: 20px;
     }
   }
 
